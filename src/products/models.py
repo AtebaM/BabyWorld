@@ -21,6 +21,7 @@ class Category(models.Model):
         ordering = ["name"]
         verbose_name_plural = "Categories"
 
+
 class Tag(models.Model):
     name = models.CharField(max_length=100)
     id = models.AutoField(primary_key=True)
@@ -82,5 +83,3 @@ class Comment(models.Model):
     def __str__(self):
         who = self.user.username if self.user else (self.guest_name or "Guest")
         return f"{who} - {self.rating}★"
-
-
