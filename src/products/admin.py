@@ -24,7 +24,8 @@ class CommentAdmin(admin.ModelAdmin):
     list_filter = ("rating", "created_at")
     search_fields = ("guest_name", "guest_email", "text", "user__username")
 
+
 @admin.register(Tag)
 class TagsAdmin(admin.ModelAdmin):
-    list_display = ("name","id", "created_at","updated_at")
+    list_display = ("name", "id", "created_at", "updated_at")
     search_fields = ("name",)
