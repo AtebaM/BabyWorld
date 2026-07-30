@@ -1,5 +1,2 @@
 
-
 # Create your models here.
-
-
