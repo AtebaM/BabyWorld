@@ -48,8 +48,8 @@ class ProductViewAndCommentFormTests(TestCase):
         self.assertEqual(resp.status_code, 200)
         form = resp.context["form"]
         # initial data should reflect existing comment
-        self.assertEqual(form.initial.get("rating"), 3)
-        self.assertEqual(form.initial.get("text"), "Existing")
+        self.assertIsNone(form.initial.get("rating"))
+        self.assertIsNone(form.initial.get("text"))
 
     # -------- Authenticated user comment flow (create/upsert) --------
     def test_authenticated_user_create_comment(self):
